@@ -59,6 +59,7 @@ class LinkedList:
 
 		# if starting node is the node to be deleted
 		if startNode.data == node.data:
+			prev = startNode
 			startNode = startNode.next
 			
 		prev = startNode
