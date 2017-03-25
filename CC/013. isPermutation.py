@@ -61,7 +61,6 @@ def isPermutation2 (s1, s2):
 	
 	return True
 	
-
 			
 # True case		
 string1 = "abc"
