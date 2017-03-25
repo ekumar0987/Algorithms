@@ -14,18 +14,15 @@ def compressedListLength(charList):
 	
 	for i in range(len(charList)):
 		
-		# special case for END OF STRING. Without this charList[i + 1] will fail in the next step
-		if i == len(charList) - 1:
+		# special case for END OF STRING. Without this charList[i + 1] will fail
+		if (i == len(charList) - 1) or (charList[i] != charList[i + 1]):
 			strLength = strLength + len(str(charCount)) + 1               # 1 for the actual character
-			return strLength
-		
-		# current character is the same as the next character, increment count
-		elif charList[i] == charList[i + 1]:
-			charCount = charCount + 1
-		
-		else:
-			strLength = strLength + len(str(charCount)) + 1
 			charCount = 1
+		# current character is the same as the next character, increment count
+		else:
+			charCount = charCount + 1
+	
+	return strLength
 			
 
 # compresses string		
@@ -43,19 +40,14 @@ def compressString(charList):
 		for i in range(len(charList)):
 			
 			# special case for END OF STRING. Without this charList[i + 1] will fail in the next step
-			if i == len(charList) - 1:
+			if (i == len(charList) - 1) or (charList[i] != charList[i + 1]):
 				compressedList.append(charList[i])
 				compressedList.append(str(charCount))	       # append count as string, else "".join fails
-				return "".join(compressedList)
-			
-			elif charList[i] == charList[i + 1]:
-				charCount = charCount + 1
-			
+				charCount = 1		# reset			
 			else:
-				compressedList.append(charList[i])
-				compressedList.append(str(charCount))
-				charCount = 1		# reset
-
+				charCount = charCount + 1
+		
+		return "".join(compressedList)
 				
 # testing
 s = "aaaaaaaaaaabbccd"
