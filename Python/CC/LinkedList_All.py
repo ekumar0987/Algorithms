@@ -59,7 +59,8 @@ class LinkedList:
 	def add_from_list_last(self, l):
 		for i in l:
 			self.add_last(i)
-			
+	
+	# get the length of the list
 	def size(self):
 		size = 0
 		tmp = self.head
@@ -68,6 +69,17 @@ class LinkedList:
 			size = size + 1
 			
 		return size
+		
+	def copy(self):
+		
+		copy = LinkedList()
+		curr = self.head
+		
+		while curr!= None:
+			copy.add_last(curr.data)
+			curr = curr.next
+			
+		return copy
 			
 	"""
 	# remove an element from the list
