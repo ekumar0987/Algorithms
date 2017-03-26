@@ -60,6 +60,15 @@ class LinkedList:
 		for i in l:
 			self.add_last(i)
 			
+	def size(self):
+		size = 0
+		tmp = self.head
+		while tmp != None:
+			tmp = tmp.next
+			size = size + 1
+			
+		return size
+			
 	"""
 	# remove an element from the list
 	def remove(self, delnode):
