@@ -50,6 +50,16 @@ class LinkedList:
 		
 	# search an element in the list
 	
+	# add elements from a list
+	def add_from_list(self, l):
+		for i in l:
+			self.add_first(i)
+			
+	# add elements from a list to the end
+	def add_from_list_last(self, l):
+		for i in l:
+			self.add_last(i)
+			
 	"""
 	# remove an element from the list
 	def remove(self, delnode):
