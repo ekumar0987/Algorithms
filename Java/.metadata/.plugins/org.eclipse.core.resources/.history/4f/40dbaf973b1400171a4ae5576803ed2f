@@ -32,9 +32,6 @@ public class reverseString {
 		String s = "happystring";
 		String reversed = r.reverseNullTerminatedString(s);
 		
-		System.out.println("The String is: " + s);
-		System.out.print("The Reversed String is: " + reversed);
-		
 	}
 
 }

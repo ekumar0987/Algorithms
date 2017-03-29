@@ -22,19 +22,8 @@ public class reverseString {
 		return new String(cArray);
 	}
 	
-	/*
-	 * Testing
-	 */
 	public static void main(String[] args) {
-		
-		reverseString r = new reverseString();
-		
-		String s = "happystring";
-		String reversed = r.reverseNullTerminatedString(s);
-		
-		System.out.println("The String is: " + s);
-		System.out.print("The Reversed String is: " + reversed);
-		
+
 	}
 
 }
