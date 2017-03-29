@@ -1,0 +1,11 @@
+/*
+ * Implement an algorithm to compress a string. Return original or compressed string depending on what is shorter
+ */
+public class compressString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
