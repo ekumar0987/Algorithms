@@ -1,0 +1,17 @@
+/*
+ * Implement an algorithm to replace all spaces with %20
+ */
+public class replaceSpaces {
+	
+	public String replaceSpacesInString(String s){
+		
+		
+		return new String();
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}
