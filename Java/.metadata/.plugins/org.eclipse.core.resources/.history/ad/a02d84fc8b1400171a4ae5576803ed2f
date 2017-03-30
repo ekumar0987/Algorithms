@@ -24,7 +24,7 @@ public class compressString {
 	
 	public String compressedString(String s){
 		
-		StringBuilder sb = new StringBuilder();                //Use of string builder to append
+		StringBuilder sb = new StringBuilder();
 		
 		if (s.length() < compressedStringLength(s))
 			return s;
