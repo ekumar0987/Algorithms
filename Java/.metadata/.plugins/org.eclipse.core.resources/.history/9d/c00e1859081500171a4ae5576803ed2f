@@ -53,8 +53,6 @@ public class markZeroes {
 		
 		int[][] markedMatrix = mz.markAllZeroes(m);
 		
-		System.out.println();
-		
 		mz.print(markedMatrix);
 	}
 
