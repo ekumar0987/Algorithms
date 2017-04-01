@@ -13,7 +13,7 @@ class threeStack():
 			print "Stack Full"
 			return
 			
-		self.topPointers[stackNo] = self.topPointers[stackNo] + 1    
+		self.topPointers[stackNo] = self.topPointers[stackNo] + 1  # increment first   
 		index = stackNo * self.size + self.topPointers[stackNo]
 		
 		self.arr[index] = item
@@ -42,4 +42,9 @@ stk.push(1,1)
 stk.push(2,1)
 stk.push(3,1)
 stk.push(4,1)  #stack full error
+
+"""
+Caveats:
+- Use an array to hold top of stack for each stack
+"""
 	
