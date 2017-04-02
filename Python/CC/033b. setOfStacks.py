@@ -62,7 +62,7 @@ class SetOfStacks:
 
 	def pop(self, stackNo):
 		
-		if self.isEmpty() or stackNo > current_stack_no:
+		if self.isEmpty() or stackNo > self.current_stack_no:
 			return 
 		
 		# get stack indicated by stack no and and pop item
@@ -74,31 +74,34 @@ class SetOfStacks:
 			del self.set_of_stacks[self.stackNo]
 			self.current_stack_no = self.current_stack_no - 1
 		
-		##############################Extra###################################
+		############################## Extra ###################################
 		# Stack not empty, move element from next stack to this stack and so on to fill the hole
 		# A tmp stack is used as a buffer 
 		else:
 			#loop over set of stacks starting from stack no
 			start_stack = stackNo
+			tmp_stack = Stack()
+			
+			# loop over all stacks till the end starting from the stack number where the item was deleted
 			for i in range(start_stack, len(self.set_of_stacks)):
 				
 				# copy over not need for the last stack
-				if start_stack == len(self.set_of_stacks) - 1:
+				if i == len(self.set_of_stacks) - 1:
 					break
 				
-				tmp_stack = Stack()
-				
 				# get next stack and copy all its elements to tmp
-				next_stack = self.set_of_stacks[start_stack + 1]
+				next_stack = self.set_of_stacks[i + 1]
 				
+				# push everything from next stack into tmp
 				while not next_stack.isEmpty():
 					tmp_stack.push(next_stack.pop())
 				
 				# pop 1 element from tmp into start_stack to fill hole
-				self.set_of_stacks[start_stack].push(tmp_stack.pop())
+				self.set_of_stacks[i].push(tmp_stack.pop())
 				
+				# push remaining items from next stack into tmp
 				while not tmp_stack.isEmpty():
-					next_stack.push(tmp_Stack.pop())
+					next_stack.push(tmp_stack.pop())
 				
 				
 		return result
@@ -108,3 +111,26 @@ class SetOfStacks:
 		for s in self.set_of_stacks:
 			s.printStack()
 			print "Next stack..."
+			
+"""
+Testing
+"""
+
+set_of_stacks = SetOfStacks()
+set_of_stacks.push(1)
+set_of_stacks.push(2)
+set_of_stacks.push(3)
+set_of_stacks.push(4)
+set_of_stacks.push(5)
+set_of_stacks.push(6)
+set_of_stacks.push(7)
+set_of_stacks.push(8)
+set_of_stacks.push(9)
+set_of_stacks.push(10)
+set_of_stacks.push(11)
+set_of_stacks.push(12)
+set_of_stacks.printSetOfStacks()
+print "\n"
+print set_of_stacks.pop(0)
+print "\n"
+set_of_stacks.printSetOfStacks()
