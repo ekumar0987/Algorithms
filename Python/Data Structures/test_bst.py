@@ -15,10 +15,32 @@ print bst.root.key
 
 bst.print_graph()
 
-print bst.find_min(bst.root).key
-print bst.find_max(bst.root).key
-print bst.depth(bst.root)
+print "Tree Minimum", bst.find_min(bst.root).key
+print "Tree Maximum", bst.find_max(bst.root).key
+print "Tree Depth", bst.depth(bst.root)
+print "Tree Size", bst.size(bst.root)
 
 bst.delete(27, bst.root)
 
 bst.print_graph()
+
+print "Printing post order traversal..."
+lst2 = [5, 4, 6, 7]
+bst2 = t.Trees()
+for i in lst2:
+    bst2.root = bst2.insert(i, bst2.root)
+
+bst2.print_graph()
+bst2.print_post_order(bst2.root)
+
+print "Has path sum ", bst2.has_path_sum(18, bst2.root)
+
+paths = []
+print "Printing list paths from root to leaf", bst2.print_paths(bst2.root, paths, 0)
+
+print "Printing nodes at level..."
+list_of_lists = []
+bst2.print_nodes_on_level(bst2.root, list_of_lists, 0)
+print list_of_lists	
+	
+
