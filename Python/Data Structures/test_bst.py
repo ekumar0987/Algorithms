@@ -2,6 +2,7 @@
 
 import Trees as t
 import random
+import sys
 
 bst = t.Trees()
 #lst = [ int(1000 * random.random()) for i in xrange(20)]
@@ -46,6 +47,14 @@ print list_of_lists
 print "Mirroring tree..."
 bst.mirror(bst.root)
 bst.print_graph()
+
+print "Checking if a tree is BST..."
+print bst.isBST(bst.root, -sys.maxsize, sys.maxsize)
+print bst2.isBST(bst2.root, -sys.maxsize, sys.maxsize)
+
+print "Checking if 2 trees are the same..."
+print bst2.sametree(bst.root, bst.root)
+print bst2.sametree(bst.root, bst2.root)
 
 
 	

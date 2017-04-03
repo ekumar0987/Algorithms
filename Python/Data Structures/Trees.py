@@ -186,6 +186,33 @@ class Trees:
 		
 		return n
 		
+	# isBST?
+	# Key here is that each node must fall within a range. The min and max variables change as you traverse
+	# left or right
+	def isBST(self, n, min, max):
+		
+		if n == None:
+			return True
+			
+		if n.key < min or n.key >= max:
+			return False
+			
+		return self.isBST(n.left, min, n.key) and self.isBST(n.right, n.key, max)
+	
+	# same tree? return true if 2 trees are structurally identical
+	def sametree(self, n1, n2):
+		
+		# both are none
+		if n1 == None and n2 == None:
+			return True
+		# one node is none and the other is not
+		elif (n1 != None and n2 == None) or (n1 == None and n2 != None):
+			return False
+		else:
+			return self.sametree(n1.left, n2.left) and self.sametree(n1.right, n2.right)
+	
+	
+	
 	# print all nodes at a given level	
 	def print_nodes_on_level(self, n, list_of_lists, level):
 		"""
