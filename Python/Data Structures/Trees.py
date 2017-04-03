@@ -144,7 +144,8 @@ class Trees:
 		return self.has_path_sum(sum, n.left) or self.has_path_sum(sum, n.right) 
 	
 	# Tricky	
-	# print all paths from root to leaf. Another pre-order traversal
+	# print all paths from root to leaf. 
+	# Important: pre-order traversal pattern
 	def print_paths(self, n, list_of_nodes, index):
 		# just return. Can't print when n is none because it will print path to leaf twice
 		# once because the left node of the leaf was null, other because the right node was null
@@ -167,6 +168,23 @@ class Trees:
 		# if not, continue iterating left and then right. Preorder traversal
 		self.print_paths(n.left, list_of_nodes, index)
 		self.print_paths(n.right, list_of_nodes, index)
+		
+	
+	# Mirror: Change a tree so that the roles of the left and right pointer are swapped at every node
+	# Important: Post order traversal pattern
+	def mirror(self, n):
+		if n == None:
+			return
+			
+		n.left = self.mirror(n.left)
+		n.right = self.mirror(n.right)
+		
+		# swap
+		tmp = n.left
+		n.left = n.right
+		n.right = tmp
+		
+		return n
 		
 	# print all nodes at a given level	
 	def print_nodes_on_level(self, n, list_of_lists, level):

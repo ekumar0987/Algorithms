@@ -30,7 +30,7 @@ bst2 = t.Trees()
 for i in lst2:
     bst2.root = bst2.insert(i, bst2.root)
 
-bst2.print_graph()
+#bst2.print_graph()
 bst2.print_post_order(bst2.root)
 
 print "Has path sum ", bst2.has_path_sum(18, bst2.root)
@@ -42,5 +42,11 @@ print "Printing nodes at level..."
 list_of_lists = []
 bst2.print_nodes_on_level(bst2.root, list_of_lists, 0)
 print list_of_lists	
+
+print "Mirroring tree..."
+bst.mirror(bst.root)
+bst.print_graph()
+
+
 	
 
