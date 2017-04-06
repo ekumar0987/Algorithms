@@ -1,0 +1,53 @@
+package datastructures;
+
+import java.util.Iterator;
+
+public class LinkedList<Anytype> implements Iterable<Anytype> {
+	
+	Node<Anytype> head = null;
+	
+	
+	private class Node<Anytype> {
+		Anytype data;
+		Node<Anytype> next;
+		
+		public Node(Anytype data){
+			this.data = data;
+			this.next = null;
+		}
+	}
+	
+	/* Iterable interface method - Mandatory */
+	@SuppressWarnings("unchecked")
+	public Iterator<Anytype> iterator(){
+		return new SinglyLinkedListIterator();
+	}
+	
+	private class SinglyLinkedListIterator implements Iterator<Anytype>{
+		private Node<Anytype> nextNode;
+		
+		// constructor
+		SinglyLinkedListIterator(){
+			nextNode = head;
+		}
+		
+		public boolean hasNext(){
+			return nextNode != null;
+		}
+		
+		public Anytype next(){
+			if (!hasNext()){
+				return null;
+			}
+			
+			Anytype result = nextNode.data;
+			nextNode = nextNode.next;
+			
+			return result;
+		}
+		
+		public void remove(){
+			
+		}
+	}
+}

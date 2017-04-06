@@ -1,0 +1,12 @@
+package datastructures;
+
+import java.util.Iterator;
+
+public class LinkedList<Anytype> implements Iterable<Anytype> {
+
+	
+	public Iterator<Anytype> iterator(){
+		return null;
+		
+	}
+}

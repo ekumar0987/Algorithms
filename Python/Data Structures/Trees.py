@@ -209,7 +209,7 @@ class Trees:
 		elif (n1 != None and n2 == None) or (n1 == None and n2 != None):
 			return False
 		else:
-			return self.sametree(n1.left, n2.left) and self.sametree(n1.right, n2.right)
+			return n1.key == n2.key and self.sametree(n1.left, n2.left) and self.sametree(n1.right, n2.right)
 	
 	
 	
