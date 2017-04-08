@@ -10,7 +10,7 @@ import java.util.Iterator;
  */
 public class LinkedList<Anytype> implements Iterable<Anytype> {
 	
-	public Node<Anytype> head;
+	Node<Anytype> head;
 	
 	public LinkedList(){
 		head = null;
@@ -145,12 +145,11 @@ public class LinkedList<Anytype> implements Iterable<Anytype> {
 		
 	}
 	
-	public void print(Node<Anytype> n) {
+	public String print() {
         String result = "";
-        Node<Anytype> current = n;
+        Node<Anytype> current = head;
         while(current != null){
             result += current.data + ", ";
-            current = current.next;
         }
         System.out.println("List: " + result);
 }

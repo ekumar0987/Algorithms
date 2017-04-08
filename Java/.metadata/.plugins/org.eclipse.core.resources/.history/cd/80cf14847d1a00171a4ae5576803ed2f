@@ -1,0 +1,11 @@
+import java.util.HashMap;
+
+public class removeDupsLinkedList {
+	
+	HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+	
+	public static void main(String[] args) {
+
+	}
+
+}

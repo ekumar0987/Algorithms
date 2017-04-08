@@ -10,7 +10,7 @@ import java.util.Iterator;
  */
 public class LinkedList<Anytype> implements Iterable<Anytype> {
 	
-	public Node<Anytype> head;
+	Node<Anytype> head;
 	
 	public LinkedList(){
 		head = null;
