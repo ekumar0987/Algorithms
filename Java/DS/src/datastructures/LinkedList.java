@@ -22,13 +22,13 @@ public class LinkedList<Anytype> implements Iterable<Anytype> {
 	 *
 	 * @param <Anytype>
 	 */
-	private static class Node<Anytype> {
-		Anytype data;
-		Node<Anytype> next;
+	public static class Node<Anytype> {
+		public Anytype data;
+		public Node<Anytype> next;
 		
 		public Node(Anytype data, Node<Anytype> next){
 			this.data = data;
-			this.next = null;
+			this.next = next;
 		}
 	}
 	
@@ -145,7 +145,17 @@ public class LinkedList<Anytype> implements Iterable<Anytype> {
 		
 	}
 	
-	public void print(Node<Anytype> n) {
+	public int size(){
+		int size = 0;
+		Node<Anytype> tmp = head;
+		while(tmp != null){
+			size++;
+			tmp = tmp.next;
+		}
+	return size;
+	}
+	
+	public void print_list(Node<Anytype> n) {
         String result = "";
         Node<Anytype> current = n;
         while(current != null){
