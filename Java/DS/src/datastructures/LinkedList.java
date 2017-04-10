@@ -155,10 +155,12 @@ public class LinkedList<Anytype> implements Iterable<Anytype> {
 	return size;
 	}
 	
-	public void print_list(Node<Anytype> n) {
+	public void print_list() {
         String result = "";
-        Node<Anytype> current = n;
+        Node<Anytype> current = head;
+        
         while(current != null){
+        	//System.out.println(result);
             result += current.data + ", ";
             current = current.next;
         }

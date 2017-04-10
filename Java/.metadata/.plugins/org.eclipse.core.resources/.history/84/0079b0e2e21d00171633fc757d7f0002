@@ -1,0 +1,24 @@
+import datastructures.LinkedList;  //add DS to CC's build path. RC CC --> properties --> build path --> projects --> add
+import datastructures.LinkedList.Node;
+
+public class kthtoLast {
+
+	public Integer getKthToLast(Node<Integer> n, int k){
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		
+		LinkedList<Integer> list = new LinkedList();
+		for(int i = 0; i < 10; i++){
+			list.addLast(i);
+		}
+		
+		list.print_list();
+		
+		kthtoLast kthtoLast = new kthtoLast();
+		
+		int kthtoLastNumber = kthtoLast.getKthToLast(list.head, 2);
+		
+	}
+}

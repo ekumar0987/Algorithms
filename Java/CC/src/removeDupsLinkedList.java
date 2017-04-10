@@ -38,8 +38,8 @@ public class removeDupsLinkedList {
 		l.addFirst(4);
 		l.addFirst(1);
 		
-		l.print_list(l.head);
+		l.print_list();
 		r.removeDupsWithHashMap(l);
-		l.print_list(l.head);
+		l.print_list();
 	}
 }
