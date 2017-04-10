@@ -56,6 +56,10 @@ print "Checking if 2 trees are the same..."
 print bst2.sametree(bst.root, bst.root)
 print bst2.sametree(bst.root, bst2.root)
 
+##################### CC #############################
+print "Checking if binary tree is height balanced.."
+bst.
+
 
 	
 
