@@ -1,0 +1,13 @@
+
+public class partitionList {
+	
+	public void partitionList(){
+		
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

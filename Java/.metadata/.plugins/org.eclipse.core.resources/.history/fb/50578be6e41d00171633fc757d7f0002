@@ -1,0 +1,23 @@
+import datastructures.LinkedList;  //add DS to CC's build path. RC CC --> properties --> build path --> projects --> add
+import datastructures.LinkedList.Node;
+
+public class partitionList {
+	
+	public void partitionList(int pivot){
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		LinkedList<Integer> list = new LinkedList<Integer>();
+		for(int i = 0; i < 10; i++){
+			list.addLast(i);
+		}
+		
+		int pivot = 6;
+		
+		partitionList p = new partitionList();
+
+	}
+
+}

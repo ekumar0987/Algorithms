@@ -75,8 +75,10 @@ public class LinkedList<Anytype> implements Iterable<Anytype> {
 	}
 	
 	public void addLast(Anytype item){
-		if (head == null)
+		if (head == null){
 			addFirst(item);
+			return;				// return statement important, else the first node will be inserted twice
+		}
 		
 		Node<Anytype> tmp = head;
 		while (tmp.next != null)

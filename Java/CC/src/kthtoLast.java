@@ -24,7 +24,8 @@ public class kthtoLast {
 			tmp = tmp.next;
 		}
 		
-		return kthtolast.data;
+	return kthtolast.data;
+	
 	}
 	
 	public static void main(String[] args) {
