@@ -76,8 +76,16 @@ def add_forward_order(n1, n2, rlist):
 		rlist.add_first(result % 10)	# add_first for PART II
 		return result / 10			    # carry for other cases
 	
+#missed this - needed to add the last carry to the result. E.g. 991 + 009 = 1000. W/O wrapper ther result will be 000 
+def add_forward_order_wrapper(n1, n2, rlist):
+	carry = add_forward_order(n1, n2, rlist)
+	if carry == 1:
+		rlist.add_first(carry)
+		
+
 def padlist(ll):
 	ll.add_first(0)
+
 	
 def equate_list_lengths(ll1, ll2):
 	len_difference = ll1.size() - ll2.size()
@@ -120,7 +128,7 @@ ll4.print_list()
 
 print "The result is.."
 rlist = l.LinkedList()
-add_forward_order(ll3.head, ll4.head, rlist )
+add_forward_order_wrapper(ll3.head, ll4.head, rlist )
 rlist.print_list()
 
 """
