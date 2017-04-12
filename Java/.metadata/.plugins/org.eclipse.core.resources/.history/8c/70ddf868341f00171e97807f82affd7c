@@ -56,15 +56,6 @@ public class addLinkedListNodes {
 		return result / 10;
 	}
 	
-	// important to take care of last carry if any
-	public void add_forward_order_wrapper(Node<Integer> n1, Node<Integer> n2){
-		
-		int carry =  add_forward_order(n1, n2);
-		if(carry == 1){
-			result_list_forward_order.addFirst(carry);
-		}
-	}
-	
 	public void pad_lists(LinkedList<Integer> l, int len){
 		
 		while(len > 0){
@@ -122,7 +113,7 @@ public class addLinkedListNodes {
 		a.compare_list_lengths(list3, list4);
 		
 		//add
-		a.add_forward_order_wrapper(list3.head, list4.head);
+		a.add_forward_order(list3.head, list4.head);
 		System.out.println("Add forward order output list..");
 		list3.print_list();
 		list4.print_list();

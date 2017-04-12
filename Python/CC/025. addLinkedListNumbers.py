@@ -32,6 +32,9 @@ def add_reverse_order(n1, n2, rlist):
 		carry = result / 10
 		result = 0				            # forgot to reset initially
 		
+	if carry == 1:						# forgot to add. E.g. 991 + 9 = 1000. W/o this line of code the result would be 000 and the carry 1 will be missed
+		rlist.add_last(carry)
+		
 	return rlist
 	
 # testing

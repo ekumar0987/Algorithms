@@ -122,7 +122,7 @@ public class addLinkedListNodes {
 		a.compare_list_lengths(list3, list4);
 		
 		//add
-		a.add_forward_order_wrapper(list3.head, list4.head);
+		a.add_forward_order(list3.head, list4.head);
 		System.out.println("Add forward order output list..");
 		list3.print_list();
 		list4.print_list();
