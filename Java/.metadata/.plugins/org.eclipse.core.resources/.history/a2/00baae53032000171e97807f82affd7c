@@ -1,0 +1,23 @@
+import datastructures.Stack; 
+
+public class QueueUsingStack {
+	
+	Stack<Integer> s1;
+	Stack<Integer> s2;
+	
+	public void enqueue(int item){
+		
+	}
+	
+	public int dequeue(){
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
