@@ -1,0 +1,37 @@
+package datastructures;
+
+public class Stack<Anytype> {
+	
+	int top;
+	Anytype[] arr;
+	private static final int initial_capacity = 20;
+	
+	public 
+	
+	
+	public void push(Anytype item){
+		
+	}
+	
+	public Anytype pop(){
+		return null;
+		
+		
+	}
+	
+	public Anytype peek(){
+		return null;
+		
+		
+	}
+	
+	public boolean isEmpty(){
+		return false;
+		
+	}
+	public static void main(String[] args) {
+		
+
+	}
+
+}
