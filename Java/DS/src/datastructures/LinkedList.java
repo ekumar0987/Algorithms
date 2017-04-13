@@ -157,6 +157,19 @@ public class LinkedList<Anytype> implements Iterable<Anytype> {
 	return size;
 	}
 	
+	public LinkedList<Anytype> copy(Node<Anytype> lsthead){
+		
+		LinkedList<Anytype> reversed_list = new LinkedList<Anytype>();
+		
+		Node<Anytype> curr = lsthead;
+		while(curr != null){
+			reversed_list.addLast(curr.data);
+			curr = curr.next;
+		}
+
+		return reversed_list;
+		
+	}
 	public void print_list() {
         String result = "";
         Node<Anytype> current = head;

@@ -1,0 +1,20 @@
+import datastructures.LinkedList;  //add DS to CC's build path. RC CC --> properties --> build path --> projects --> add
+import datastructures.LinkedList.Node;
+
+public class isPalindrome {
+	
+	public boolean isPalindrome(){
+		
+	}
+	
+	public Node<Integer> reverse(){
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}
