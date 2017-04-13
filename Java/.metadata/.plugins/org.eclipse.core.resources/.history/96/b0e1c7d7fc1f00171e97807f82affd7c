@@ -1,0 +1,11 @@
+/*
+ * Implement a stack in which push, pop and min can be completed in O(1) time
+ */
+public class PushPopMin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
