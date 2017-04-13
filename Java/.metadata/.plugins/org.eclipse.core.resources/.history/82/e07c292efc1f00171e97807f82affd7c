@@ -11,8 +11,6 @@ public class threeStack {
 	public threeStack(){
 		three_stacks = new int[15];
 		stack_top_pointers = new int[3];
-		
-		// Important step: Initializing to -1
 		for(int i=0; i<3; i++)
 			stack_top_pointers[i] = -1;
 	}
@@ -29,6 +27,8 @@ public class threeStack {
 		else{
 			three_stacks[index] = item;
 		}
+		
+		System.out.println(stack_top_pointers[stack_no]);
 	}
 	
 	
@@ -39,7 +39,7 @@ public class threeStack {
 			System.out.println("Stack is empty");
 		else{
 			result = three_stacks[index];
-			three_stacks[index] = -1;	//Error: cannot convert from null to int. Hence used -1. This is an important step. Otherwise nothing is really deleted
+			//three_stacks[index] = null;	//Error: cannot convert from null to int
 			stack_top_pointers[stack_no]--;
 		}
 		
@@ -66,7 +66,6 @@ public class threeStack {
 		System.out.println();
 	}
 	
-	
 	public static void main(String[] args) {
 		
 		threeStack ts = new threeStack();
@@ -79,11 +78,14 @@ public class threeStack {
 		ts.push(2, 2);
 		ts.push(2, 1);
 		
-		ts.print_stack(0);
-		ts.print_stack(2);
+		//ts.print_stack(0);
+		//ts.print_stack(2);
 		
 		System.out.println(ts.pop(0));
 		System.out.println(ts.pop(0));
+		//System.out.println(ts.pop(0));
+		//System.out.println(ts.pop(0));
+		//System.out.println(ts.pop(0));
 		ts.print_stack(0);
 		
 		
