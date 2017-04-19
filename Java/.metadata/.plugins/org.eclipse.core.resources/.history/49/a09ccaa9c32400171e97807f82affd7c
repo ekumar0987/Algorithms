@@ -1,0 +1,51 @@
+import java.util.*;
+import datastructures.Stack;  
+/*
+ * Set of stacks implementation - pop from a specific stack and move all elements to left
+ */
+public class SetOfStacksVariation {
+	
+	ArrayList<Stack<Integer>> sos;  	//Need an array list of stacks only! It is very hard to track stack pointers of individual stacks otherwise
+	int currentstack;
+	
+	public SetOfStacksVariation(){
+		
+		sos = new ArrayList<Stack<Integer>>();
+		Stack<Integer> s = new Stack<Integer>(5);
+		
+		sos.add(s);
+		currentstack = 0;
+	}
+	
+	public void push(int item){
+		
+		Stack<Integer> s = sos.get(currentstack);
+		
+		if(s.isFull()){
+			Stack<Integer> newstack = new Stack<Integer>(5);
+			newstack.push(item);
+			sos.add(s);
+			currentstack++;
+		}
+		else{
+			s.push(item);
+		}
+	}
+	
+	public int pop(int stacknum){
+		
+		if(sos.size() == 0){
+			System.out.println("Set of Stacks Empty!");
+			return -1;
+		}
+		
+		ArrayList<Integer> s = sos.get(stacknum);
+		int result = s.remove(stacksize - 1);
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,29 @@
+import java.util.*;
+/*
+ * Set of stacks implementation - pop from a specific stack and move all elements to left
+ */
+public class SetOfStacksVariation {
+	
+	ArrayList<ArrayList<Integer>> sos;
+	int currentstack;
+	static final int stacksize = 5;
+	int stacktop;
+	
+	public SetOfStacksVariation(){
+		
+		sos = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> s = new ArrayList<Integer>();
+		
+		sos.add(s);
+		currentstack = 0;
+		stacktop = -1;
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

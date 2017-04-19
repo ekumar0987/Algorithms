@@ -2,7 +2,7 @@ package datastructures;
 
 public class Stack<Anytype> {
 	
-	public int top;
+	int top;
 	Anytype[] arr;
 	private static final int initial_capacity = 20;
 	int size;
