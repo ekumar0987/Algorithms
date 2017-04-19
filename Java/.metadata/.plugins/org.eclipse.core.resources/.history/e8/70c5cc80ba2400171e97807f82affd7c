@@ -1,0 +1,14 @@
+/*
+ * Set of stacks implementation. When a stack gets full, create a new stack and push to that. If a stack is empty after popping an element, remove the stack from
+ * the set of stacks
+ */
+public class SetOfStacks {
+	
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

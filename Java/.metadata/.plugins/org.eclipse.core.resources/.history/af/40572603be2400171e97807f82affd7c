@@ -10,21 +10,17 @@ public class SetOfStacks {
 	int stacktop;
 	static final int stacksize = 5;
 	
-	// Important initialization
 	public SetOfStacks(){
 		sos = new ArrayList<ArrayList<Integer>>();
 		ArrayList<Integer> s = new ArrayList<Integer>();
 		sos.add(s);											//Missed adding the first stack to the set!
 		currentstack = 0;
-		
-		//This pointer needed if I have "arraylist of arraylist" and not "arraylist of stack" 
-		//arraylist remove method needs an index. w/o this which element will you remove?
 		stacktop = -1;
 	}
 	
 	public void push(int item){
 		ArrayList<Integer> s = sos.get(currentstack);
-		System.out.println("Stack size before insert is.." + s.size());
+		System.out.println("Stack size is.." + s.size());
 		
 		//Stack is full? Create a new stack and add items there
 		if(s.size() == stacksize){
@@ -66,12 +62,10 @@ public class SetOfStacks {
 		for(int i = 0; i <= currentstack; i++){
 			System.out.println("Printing stack.." + i);
 			ArrayList<Integer> s = sos.get(i);
-			
 			System.out.println("Printing stack contents..");
 			for(int j = 0; j <= stacktop; j++){
 				System.out.print(s.get(j));
 			}
-			
 			System.out.println();
 		}
 		
@@ -83,10 +77,6 @@ public class SetOfStacks {
 		for(int i = 0; i < 10; i++){
 			sos.push(i);
 		}
-		
-		sos.print();
-		
-		System.out.println("Popped an element.." + sos.pop());
 		
 		sos.print();
 
