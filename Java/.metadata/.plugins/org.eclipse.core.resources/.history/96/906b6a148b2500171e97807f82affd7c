@@ -1,0 +1,30 @@
+import datastructures.BinarySearchTrees;
+import datastructures.BinarySearchTrees.Node;
+import datastructures.LinkedList;
+import java.util.*;
+
+public class CreateListOfNodesAtLevel {
+	
+	ArrayList<LinkedList<Integer>> arrlist = new ArrayList<LinkedList<Integer>>();
+	
+	public void createLL(Node n, int level){
+		
+		// no linked list exists yet
+		if(arrlist.size() == level - 1){
+			LinkedList<Integer> lst = new LinkedList<Integer>();
+			lst.addFirst(n.getdata());
+			arrlist.add(lst);
+		}
+		// a linked list already exists at this level
+		else{
+			LinkedList<Integer> lst = arrlist.get(level);
+			lst.addFirst(n.getdata());
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

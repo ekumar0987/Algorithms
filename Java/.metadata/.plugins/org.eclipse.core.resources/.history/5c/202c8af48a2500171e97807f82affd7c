@@ -1,0 +1,20 @@
+import datastructures.BinarySearchTrees;
+import datastructures.BinarySearchTrees.Node;
+import datastructures.LinkedList;
+import java.util.*;
+
+public class CreateListOfNodesAtLevel {
+	
+	ArrayList<LinkedList<Integer>> arrlist = new ArrayList<LinkedList<Integer>>();
+	
+	public void createLL(Node n, int level){
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}
