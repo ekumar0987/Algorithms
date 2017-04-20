@@ -46,7 +46,7 @@ def inorder_successor(n, key):
 	
 """
 Caveats:
-	- In order SUCCESSOR is either the leftmost child of the right subtree OR the starting node of the left subtree where the key resides!
+	- In order SUCCESSOR is either the leftmost child of the right subtree OR the latest node of the left subtree where the key resides!
 """
 
 bst = t.Trees()

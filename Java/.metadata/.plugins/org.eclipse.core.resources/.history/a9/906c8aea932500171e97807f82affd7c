@@ -1,0 +1,25 @@
+import datastructures.BinarySearchTrees;
+import datastructures.BinarySearchTrees.Node;
+
+/*
+ * Find the inorder successor of a node in the tree
+ */
+public class InOrderSuccessor {
+	
+	public Node inordersucc(Node n){
+		
+		if(n == null){
+			
+		}
+		
+		Node curr = n;
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

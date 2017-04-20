@@ -1,0 +1,11 @@
+/*
+ * Find the inorder successor of a node in the tree
+ */
+public class InOrderSuccessor {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
