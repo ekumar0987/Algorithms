@@ -1,0 +1,42 @@
+/*
+ * Create a binary search tree from a sorted array
+ */
+public class createBST {
+	
+	public class Node{
+		
+		int data;
+		public Node left;
+		public Node right;
+		
+		public Node(int data){
+			this.data = data;
+			this.left = null;
+			this.right = null;
+			}
+		}
+
+	public Node createBST(int[] arr, int low, int high){
+		
+		if(low > high)
+			return null;
+		
+		int mid = (low + high) / 2;
+		
+		Node n = new Node(arr[mid]); 
+		
+		n.left = createBST(arr, low, mid-1);
+		n.right = createBST(arr, mid+1, high);
+		
+		return n;
+	}
+	
+	public static void main(String[] args) {
+		
+		createBST c = new createBST();
+		int[] arr = {1,2,3,4,5,6,7};
+		
+		c.createBST(arr, 0, arr.length-1);
+	}
+
+}
