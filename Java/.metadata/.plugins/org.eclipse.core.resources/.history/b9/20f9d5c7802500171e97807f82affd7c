@@ -2,7 +2,7 @@ package datastructures;
 
 public class BinarySearchTrees {
 
-	public Node root;
+	Node root;
 	
 	public BinarySearchTrees(){
 		root = null;

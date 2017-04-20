@@ -1,0 +1,42 @@
+import datastructures.BinarySearchTrees; 
+
+/*
+ * Checks to see if a binary tree is balanced
+ */
+public class isBalanced {
+	
+	public boolean isBalancedBST(Node n){
+		
+		if(HeightBalanced < 0)
+			return false;
+		else
+			return true;
+		
+	}
+	
+	//Post Order Traversal. Variation of Ht
+	public int HeightBalanced(Node n){
+		
+		//Process left
+		int leftheight = HeightBalanced(n.left);
+		if (leftheight == -1)
+			return leftheight;
+		
+		//Process right
+		int rightheight = HeightBalanced(n.right);
+		if (rightheight == -1)
+			return rightheight;
+		
+		//Process node
+		int diff = Math.abs(leftheight - rightheight);
+		if(diff > 1)
+			return -1;
+		else
+			return 1 + Math.max(leftheight, rightheight);
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

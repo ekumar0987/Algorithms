@@ -51,8 +51,6 @@ public class isBalanced {
 			bst1.insert(i, bst1.root);
 		}
 		
-		System.out.println(b.isBalancedBST(bst1.root));
-		
 		//Balanced tree example
 		BinarySearchTrees bst2 = new BinarySearchTrees();
 		int[] input2 = {2, 1, 3};
