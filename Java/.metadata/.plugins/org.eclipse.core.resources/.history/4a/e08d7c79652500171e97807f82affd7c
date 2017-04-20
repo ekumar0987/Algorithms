@@ -1,0 +1,67 @@
+package datastructures;
+
+public class BinarySearchTrees {
+
+	Node root;
+	
+	public BinarySearchTrees(){
+		root = null;
+	}
+	
+	public Node insert(int item, Node n){
+		
+		if(n == null){
+			Node newnode = new Node(item);
+			
+			if(root == null)
+				root = newnode;
+			
+			return newnode;
+		}
+		
+		Node curr = n;
+		if(curr.data == item){
+			System.out.println("Duplicate Entry");
+			return null;
+		}
+		else if(curr.data < item)
+			curr.right = insert(item, curr.right);
+		else if(curr.data > item)
+			curr.left = insert(item, curr.left);
+		
+		return curr;
+	}
+	
+	public boolean find(int item){
+		return false;
+	}
+	
+	public int delete(int item){
+		return -1;
+	}
+	
+	
+	public class Node{
+		
+		int data;
+		Node left;
+		Node right;
+		
+		public Node(int data){
+			this.data = data;
+			this.left = null;
+			this.right = null;
+		}
+		
+		public int getdata(){
+			return this.data;
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

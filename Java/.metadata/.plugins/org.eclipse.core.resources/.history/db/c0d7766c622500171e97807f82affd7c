@@ -1,0 +1,47 @@
+package datastructures;
+
+public class BinarySearchTrees {
+
+	Node root;
+	
+	public BinarySearchTrees(){
+		root = null;
+	}
+	
+	public void insert(int item){
+		
+	}
+	
+	public boolean find(int item){
+		return false;
+	}
+	
+	public int delete(int item){
+		return -1;
+	}
+	
+	
+	public class Node{
+		
+		int data;
+		Node left;
+		Node right;
+		
+		public Node(int data){
+			this.data = data;
+			this.left = null;
+			this.right = null;
+		}
+		
+		public int getdata(){
+			return this.data;
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}
