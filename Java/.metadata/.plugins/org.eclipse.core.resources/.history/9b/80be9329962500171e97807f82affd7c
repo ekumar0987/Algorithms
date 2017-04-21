@@ -38,6 +38,7 @@ public class InOrderSuccessor {
 					return succ;					//Missed this return. W/o this again, the loop will not exit since curr is not updated
 				}
 			}
+			
 		}
 		
 		return succ; 

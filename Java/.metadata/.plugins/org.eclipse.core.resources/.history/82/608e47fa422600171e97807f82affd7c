@@ -1,0 +1,33 @@
+import datastructures.BinarySearchTrees;
+import datastructures.BinarySearchTrees.Node;
+
+/*
+ * Print all paths that add up to a number irrespective of the start and end nodes
+ */
+public class PrintAllPaths {
+	
+	public void printpaths(Node n, int sum, int[] path, int level){
+		if(n == null)
+			return;
+		
+		path[level] = n.getdata();
+		int runningsum = 0;
+		for(int i=level; i>=0; i--){
+			runningsum = runningsum + path[i];
+			if(runningsum == sum)
+				print();
+		}
+		
+		printpaths(n.left, sum, path, level+1);
+		printpaths(n.right, sum, path, level+1);
+	}
+	
+	public void print(){
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

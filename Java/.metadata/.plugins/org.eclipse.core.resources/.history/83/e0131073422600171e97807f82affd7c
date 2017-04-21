@@ -1,0 +1,22 @@
+import datastructures.BinarySearchTrees;
+import datastructures.BinarySearchTrees.Node;
+
+/*
+ * Print all paths that add up to a number irrespective of the start and end nodes
+ */
+public class PrintAllPaths {
+	
+	public printpaths(Node n, int sum, int[] path, int level){
+		if(n == null)
+			return;
+		
+		path[level] = n.data
+		for(int )
+					
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

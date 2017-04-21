@@ -1,0 +1,10 @@
+/*
+ * Print all paths that add up to a number irrespective of the start and end nodes
+ */
+public class PrintAllPaths {
+
+	public static void main(String[] args) {
+
+	}
+
+}
