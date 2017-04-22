@@ -1,0 +1,53 @@
+/*
+ * Given a sorted array of strings interspersed with empty strings write a method to find the location of a given string
+ * Considerations: What if someone searches for an empty string?
+ */
+public class SortStringArrayWithEmptyStrings {
+	
+	public int search(String[] sArr, int left, int right, String x){
+		
+		if(left > right)
+			return -1;
+		
+		int mid = (left + right) / 2;
+		
+		/*
+		 * (A) If mid is empty, move right to find non empty mid. If you reach the end of the array there
+		 *     look left to find a non empty mid
+		 */
+		if(sArr[mid].isEmpty()){
+			
+			int midleft = mid - 1;
+			int midright = mid + 1;
+			
+			while(true){
+				
+				if(midleft < left && midright > right)
+					return -1;
+							
+				if(midright <= right && !sArr[midright].isEmpty()){
+					mid = midright;
+					break;
+				}
+				else if (midleft >= left && !sArr[midleft].isEmpty()){
+					mid = midleft;
+					break;
+				}
+				midleft--;
+				midright++;
+			}
+			
+		}
+		
+		if(sArr[mid].equals(x))
+			return mid;
+		else if (sArr[mid].compareTo(x) < 0)			// search right
+			return search(sArr, mid+1, right, x);
+		else											// search left
+			return search(sArr, left, mid-1, x);
+	}
+	
+	public static void main(String[] args) {
+
+	}
+}

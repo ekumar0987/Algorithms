@@ -1,0 +1,10 @@
+/*
+ * Given a sorted array of strings interspersed with empty strings write a method to find the location of a given string
+ */
+public class SortStringArrayWithEmptyStrings {
+
+	public static void main(String[] args) {
+
+	}
+
+}

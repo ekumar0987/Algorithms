@@ -17,7 +17,7 @@ public class SortedRotatedArraySearch {
 		 */
 		if(arr[mid] > arr[left]){ // left sorted
 			
-			if(x >= arr[left] && x <= arr[mid])		    // x in sorted part
+			if(x >= arr[left] && x <= arr[mid])		// x in sorted part
 				return search(arr,left,mid-1,x);
 			else
 				return search(arr,mid+1,right,x);
@@ -36,9 +36,9 @@ public class SortedRotatedArraySearch {
 		 */
 		else{ 
 			
-			int result = search(arr,left,mid-1,x);	   // search left
+			int result = search(arr,left,mid-1,x);	// search left
 			if(result == -1)
-				result = search(arr,mid+1,right,x);	   // search right
+				result = search(arr,mid+1,right,x);	// search right
 			return result;
 		}
 	}
