@@ -1,0 +1,26 @@
+/*
+ * A magic index in an array A[1...n-1] is defined to be an index such that A[i] = i.
+ * Given a sorted array of distinct integers, write a method to find a magic index, if
+ * one exists. What if the values are not distinct
+ */
+public class MagicIndex {
+	
+	public int mindex(int[] arr, int left, int right){
+		if(left > right)
+			return -1;
+		
+		int mid = (left + right)/2;
+		if(mid == arr[mid])
+			return mid;
+		
+		if(mid < arr[mid])	// magic index could only be on the left
+			return mindex(arr, left, mid-1);
+		else
+			return mindex(arr, mid+1, right);
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}
