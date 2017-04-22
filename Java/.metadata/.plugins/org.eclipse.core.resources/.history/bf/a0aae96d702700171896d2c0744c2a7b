@@ -1,0 +1,11 @@
+/*
+ * Sort array of strings such that anagrams are next to ech other
+ */
+public class AnagramSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

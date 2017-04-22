@@ -1,0 +1,13 @@
+/*
+ * Sort array of strings such that anagrams are next to each other
+ */
+public class AnagramsSort {
+	
+	public String[] AnagramSort
+	
+	
+	public static void main(String[] args) {
+
+	}
+
+}
