@@ -1,0 +1,78 @@
+import java.util.*;
+/*
+ * Imagine a robot sitting on the upper left corner of an X by Y grid. The robot can only move in 2 directions right and down. 
+ * How many possible paths are there for the robot to go from (0,0) to (X,Y)
+ * Imagine certain paths are off limits. Design and algorithm to find a path for the robot from the top left to the bottom right
+ * 
+ * Example Grid - 
+ * 
+ * 		 0	 1	 2	 3
+ * 		 -------------
+ * 	0	|0	 0	 0 	 0
+ * 	1	|0	-1	-1	 0
+ * 	2	|0	 0	 0	-1
+ * 	3	|0	-1	 0	 0
+ * 
+ * -1 are off limits
+ */
+public class GetPath {
+	
+	int[][] grid;
+	
+	class Point{
+		int x;
+		int y;
+		
+		public Point(int x, int y){
+			this.x = x;
+			this.y = y;
+		}
+		
+		public void print(){
+			System.out.println("Printing point:("+x+","+y+")");
+		}
+	}
+	
+	public GetPath(){
+		grid = new int[4][4];
+		
+		// Setting cells that are off limits
+		grid[1][1] = -1;
+		grid[1][2] = -1;
+		grid[2][3] = -1;
+		grid[3][1] = -1;
+	}
+	
+	public boolean isFree(int x, int y){
+		if(grid[x][y] == -1)
+			return false;
+		else
+			return true;
+	}
+	
+	public boolean getpath(int x, int y, ArrayList<Point> path){
+		if(x<0 || y<0 || !isFree(x,y))
+			return false;
+		
+		if(x == 0 && y == 0)
+			return true;
+					
+		Point p = new Point(x,y);
+		path.add(p);
+		return (getpath(x, y-1, path) || getpath(x-1, y, path));
+	}
+	
+	public static void main(String[] args) {
+		GetPath g = new GetPath();
+		ArrayList<Point> path = new ArrayList<Point>();
+		boolean pathExists = g.getpath(3, 3, path);			//4x4 grid, indices go up to 3
+		if(pathExists){
+			for(int i=0; i<path.size();i++){
+				path.get(i).print();
+				System.out.println();
+			}
+		}
+			
+	}
+
+}
