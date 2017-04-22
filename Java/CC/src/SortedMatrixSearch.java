@@ -1,0 +1,38 @@
+/*
+ * Given an M x N matrix in which each row and each column is sorted in ascending order write a method
+ * to find an elements
+ */
+public class SortedMatrixSearch {
+
+	public boolean search(int[][] m, int x){
+		
+		/*
+		 * (A) Starting point for the search - first row and last column
+		 */
+		int row = 0;
+		int col = m[0].length - 1;
+		
+		while (row < m.length && col >= 0){
+			if(m[row][col] == x)
+				return true;
+			else if(m[row][col] > x)
+				col--;
+			else
+				row++;
+		}
+		
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		
+		SortedMatrixSearch s = new SortedMatrixSearch();
+		int[][] m = {{1,2,3,4},
+				     {5,6,7,8},
+				     {9,10,11,12},
+				     {13,14,15,16}};
+		
+		System.out.println("Searching 5 - "+s.search(m, 5));
+		System.out.println("Searching 20 - "+s.search(m, 20));
+	}
+}

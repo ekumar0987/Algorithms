@@ -1,0 +1,60 @@
+/*
+ * Implement an algorithm to insert a stream of integers as you read them and get the rank of
+ * any number. The rank of a number x, is the number of values less than or equal to x
+ */
+public class BSTVariation {
+	
+	Node root;
+	
+	public BSTVariation(){
+		root = null;
+	}
+	
+	private class Node{
+		int data;
+		Node left;
+		Node right;
+		
+		public Node(int data){
+			this.data = data;
+			this.left = null;
+			this.right = null;
+		}
+	}
+	
+	public Node insert(Node n,int item){
+		
+		if(n==null){
+			Node newnode = new Node(item);
+			if(root == null)
+				root = newnode;
+			return newnode;
+		}
+		
+		if(item < n.data)
+			n.left = insert(n.left, item);
+		else if(item > n.data)
+			n.right = insert(n.right, item);
+		else{
+			System.out.println("Duplicate");
+			return null;
+		}
+		
+		return n;
+	}
+	
+	public int getRankOfNumber(Node n){
+		
+		int count = 0;
+		
+		return count;
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,25 @@
+
+public class SortedMatrixSearch {
+
+	public boolean search(int[][] m, int x){
+		
+		int row = m.length - 1;
+		int col = m[0].length - 1;
+		
+		while (row < m.length && col >= 0){
+			if(m[row][col] == x)
+				return true;
+			else if(m[row][col] > x)
+				col--;
+			else
+				row++;
+		}
+		
+		return false;
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

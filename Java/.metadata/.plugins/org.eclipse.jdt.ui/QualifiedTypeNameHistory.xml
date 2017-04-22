@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="datastructures.LinkedList"/>
 <fullyQualifiedTypeName name="datastructures.BinarySearchTrees"/>
 <fullyQualifiedTypeName name="datastructures.BinarySearchTrees.Node"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 </qualifiedTypeNameHistroy>

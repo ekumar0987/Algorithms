@@ -1,0 +1,13 @@
+/*
+ * Implement an algorithm to insert a stream of integers as you read them and get the rank of
+ * any number. The rank of a number x, is the number of values less than or equal to x
+ */
+public class BSTVariation {
+	
+	
+	
+	public static void main(String[] args) {
+
+	}
+
+}
