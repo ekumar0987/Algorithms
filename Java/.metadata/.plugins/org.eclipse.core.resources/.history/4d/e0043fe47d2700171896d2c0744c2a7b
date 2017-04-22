@@ -1,0 +1,53 @@
+
+public class SortedRotatedArraySearch {
+
+	public int search(int[] arr, int left, int right, int x){
+		
+		int mid = (left + right)/2;
+		if(arr[mid] == x)
+			return mid;
+		
+		if(left > right)
+			return -1;
+		
+		/*
+		 * (A) First step - Check which part is sorted
+		 * 	   Second step - Check if x falls in the sorted part. If yes, search sorted part. If not, search unsorted part
+		 */
+		if(arr[mid] > arr[left]){ // left sorted
+			
+			if(x > arr[left] && x < arr[mid])		// x in sorted part
+				return search(arr,left,mid-1,x);
+			else
+				return search(arr,mid+1,right,x);
+		}
+		
+		else if(arr[mid] < arr[right]){ // right sorted
+			
+			if(x > arr[mid] && x < arr[right])		// x in sorted part
+				return search(arr,mid+1,right,x);
+			else
+				return search(arr,left,mid-1,x);
+		}
+		
+		/*
+		 * (B) Both left and right are unsorted. So you'll have to search on both sides
+		 */
+		else{ 
+			
+			int result = search(arr,left,mid-1,x);	// search left
+			if(result == -1)
+				result = search(arr,mid+1,right,x);	// search right
+			return result;
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		SortedRotatedArraySearch s = new SortedRotatedArraySearch();
+		int[] arr = {8,7,6,1,2,3,4,5};
+		int index = s.search(arr, 0, arr.length-1, 7);
+		
+	}
+
+}
