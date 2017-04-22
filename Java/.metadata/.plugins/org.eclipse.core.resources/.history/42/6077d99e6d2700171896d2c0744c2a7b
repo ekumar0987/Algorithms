@@ -1,0 +1,41 @@
+/*
+ * Given 2 sorted arrays, A and B, where A has a large enough buffer at the end to hold B. Write a method to merge B into A in sorted order
+ */
+public class MergedSorted {
+
+	public int[] merge(int[] a, int[] b, int lenA, int lenB){
+		
+		int indexA = lenA - 1;
+		int indexB = lenB - 1;
+		int indexMerged = lenA + lenB - 1;
+		
+		/*
+		 * (A)Important outer loop only indexB. If we're done with A, we still need to copy over B. So the outer loop goes on till indexB reaches the start of array B.
+		 * What if we're done with B? We still don't need to loop over indexA because we're elements into A and the elements are already in the right sorted order
+		 */
+		while(indexB >= 0){
+			
+			/*
+			 * (B) Check for indexA here. When you're done with A and still left with elements in B, indexA = -1. W/O the check a[indexA] will fail
+			 */
+			if(indexA >=0 && a[indexA] > b[indexB]){
+				a[indexMerged] = a[indexA];
+				indexA--;
+			}
+			else{
+				a[indexMerged] = b[indexB];
+				indexB--;
+			}
+			
+			indexMerged--;
+		}
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}
