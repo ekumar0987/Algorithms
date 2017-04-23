@@ -33,7 +33,7 @@ public class MagicIndex {
 			return mid;
 		
 		/*
-		 * (B) You need to traverse both sides, but know what's the minimum or maximum index
+		 * (A) You need to traverse both sides, but know what's the minimum or maximum index
 		 * that can be a magic index
 		 */
 		int magicIndexLeft = mindexVariation(arr, left, Math.min(mid,  arr[mid]));
@@ -49,10 +49,10 @@ public class MagicIndex {
 		
 		// Test case 1
 		int[] arr = {-40,-20,-1,1,2,3,5,7,9,12,13};
-		System.out.println("The magic index with non duplicate elements is: " + m.mindex(arr, 0, arr.length-1));	
+		System.out.println("The magic index is: " + m.mindex(arr, 0, arr.length-1));	
 		
 		// Test case 2
-		int[] arrDups = {-10,-5,2,2,2,3,4,6,8,12,13};
-		System.out.println("The magic index with duplicate elements is: " + m.mindex(arrDups, 0, arrDups.length-1));
+		int[] arrDups = {-10,-5,2,2,2,3,4,7,9,12,13};
+		System.out.println("The magic index is: " + m.mindex(arrDups, 0, arrDups.length-1));
 	}
 }
