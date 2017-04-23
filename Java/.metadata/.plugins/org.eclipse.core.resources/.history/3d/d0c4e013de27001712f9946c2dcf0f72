@@ -1,0 +1,28 @@
+/*
+ * Implement an algorithm to print all valid combinations of n pairs of parenthesis
+ * n = 1: ()
+ * n = 2: 
+ * Get parens for n=1 i.e. (). Iterate over this and add paren after '('. This gives (())
+ * Next add paren at to the beginning which gives ()()
+ */
+import java.util.*;
+public class GenerateParens {
+
+	/*
+	 * Very similar to permuations
+	 */
+	public static getParens(int n){
+		
+		Set<String> set = new HashSet<String>();
+		if(n == 0)
+			set.add("");
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

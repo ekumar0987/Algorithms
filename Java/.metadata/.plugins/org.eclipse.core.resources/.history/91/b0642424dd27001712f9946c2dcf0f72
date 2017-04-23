@@ -1,0 +1,11 @@
+/*
+ * Implement an algorithm to print all valid combinations of n pairs of parenthesis
+ */
+public class GenerateParens {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
