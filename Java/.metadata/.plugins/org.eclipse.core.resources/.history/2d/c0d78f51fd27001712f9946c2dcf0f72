@@ -35,6 +35,7 @@ public class LongestIncreasingSubsequence{
 		      maxLength = DP[i];
 		   }
 		}
+		
 		return prev;
 	}
 
@@ -43,10 +44,9 @@ public class LongestIncreasingSubsequence{
 		int[] prev = LISDP(arr);
 		
 		System.out.println("The longest increasing subsequence is..");
-		int i = bestEnd;
-		while(i >=0){
-			System.out.print(arr[i]+",");
-			i = prev[i];
+		for(int i=bestEnd; i >=0 ; i--){
+			
+			
 		}
 	}
 }

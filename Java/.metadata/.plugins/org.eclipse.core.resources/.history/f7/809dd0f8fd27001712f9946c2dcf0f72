@@ -35,6 +35,10 @@ public class LongestIncreasingSubsequence{
 		      maxLength = DP[i];
 		   }
 		}
+		
+		for(int i : prev)
+			System.out.print(i);
+		
 		return prev;
 	}
 
