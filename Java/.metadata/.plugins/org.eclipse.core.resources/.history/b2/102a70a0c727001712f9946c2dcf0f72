@@ -1,0 +1,65 @@
+/*
+ * Return all subsets of a set
+ */
+import java.util.*;
+public class SubsetsOfSet {
+	
+	public ArrayList<ArrayList<Integer>> getSubsets(ArrayList<Integer> set, int index){
+		ArrayList<ArrayList<Integer>> allsubsets;
+		
+		/*
+		 * (A) Base case
+		 */
+		if(set.size() == index){
+			allsubsets = new ArrayList<ArrayList<Integer>>();
+			allsubsets.add(new ArrayList<Integer>());
+		}
+		else{
+			allsubsets = getSubsets(set, index + 1);
+			int item = set.get(index);
+			/*
+			 * (B) moresubsets is just a working copy of allsubsets. allsubsets is used in a loop on line 24. Hence we cannot
+			 * add to this list inside the loop. We hence use moresubsets and add moresubsets to allsubsets in the end
+			 * (C) Visualize with n = 0 {} 
+			 * 	   n = 1 "I - {}, II - {1}
+			 * 	   I is the "subset" in statement "for(ArrayList<Integer> subset: allsubsets" since allsubsets at this point only contain {}
+			 *     II is got from adding "item" to I
+			 * 
+			 * 	   n = 2 "I -{}, II-{1}, III-{2}, IV{1,2}
+			 * 	   I and II is got from "subset" in statement - for(ArrayList<Integer> subset: allsubsets)
+			 * 	   III and IV is got from adding "item" (that's 2) to I and II respectively
+			 */
+			ArrayList<ArrayList<Integer>> moresubsets = new ArrayList<ArrayList<Integer>>();
+			for(ArrayList<Integer> subset: allsubsets){
+				ArrayList<Integer> newsubset = new ArrayList<Integer>();
+				newsubset.addAll(subset);
+				newsubset.add(item);
+				System.out.println(newsubset.size());
+				moresubsets.add(newsubset);
+			}
+		allsubsets.addAll(moresubsets);
+		}
+	return allsubsets;
+	}
+	
+	public static void main(String[] args) {
+		
+		SubsetsOfSet s = new SubsetsOfSet();
+		ArrayList<Integer> set = new ArrayList<Integer>();
+		set.add(1);
+		set.add(2);
+		set.add(3);
+		
+		System.out.println("The subsets of the set are:");
+		ArrayList<ArrayList<Integer>> allsubsets = s.getSubsets(set, 0);
+		for(ArrayList<Integer> a: allsubsets){
+			System.out.println("Printing subset..");
+			for(Integer i: a){
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+		
+	}
+
+}

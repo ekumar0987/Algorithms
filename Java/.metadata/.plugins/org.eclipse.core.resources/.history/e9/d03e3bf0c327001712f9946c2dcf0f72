@@ -1,0 +1,15 @@
+/*
+ * Return all subsets of a set
+ */
+import java.util.*;
+public class SubsetsOfSet {
+	
+	public ArrayList<ArrayList<Integer>> getSubsets(ArrayList<Integer> set, int index){
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}
