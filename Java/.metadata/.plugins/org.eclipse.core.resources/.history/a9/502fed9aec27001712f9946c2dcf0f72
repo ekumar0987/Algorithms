@@ -1,0 +1,13 @@
+/*
+ * Algorithm to print all ways of arranging 8 queens on a 8 * 8 board so that
+ * none of them share the same row, column or diagonal. In this case "diagonal"
+ * means all diagonals, not just the 2 that bisect the board
+ */
+public class PlaceQueens {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
