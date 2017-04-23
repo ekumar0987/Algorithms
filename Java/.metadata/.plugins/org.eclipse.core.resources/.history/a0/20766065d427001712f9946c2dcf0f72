@@ -1,0 +1,105 @@
+/*
+ * Compute all permutations of a string of unique characters
+ * Time complexity: n!
+ */
+import java.util.*;
+public class PermutationsOfStringChars {
+
+	// approach 1
+	public void perms(String prefix, String str){
+		
+		if(str.length() == 0)
+			System.out.println(prefix);
+		else{
+			for(int i = 0; i < str.length(); i++){
+				perms(prefix + str.charAt(i), str.substring(0, i) + str.substring(i+1));
+			}
+		}
+	}
+	
+	/*
+	 * For 1 character, 'c' the permutation is 'c' i.e. 
+	 * first = str.charAt(0) which is c
+	 * remaining = ""
+	 * words = array list with "" 
+	 * loop over 'words' and stuff 'first' between 'prefix' and 'suffix' which are both blank
+	 * 
+	 * For 2 characters, bc
+	 * first = str.charAt(0) i.e. b
+	 * remaining = "c"
+	 * words = array list with "c" because as we saw before permutation of c is c
+	 * loop over 'words' and stuff 'first' between 'prefix' and 'suffix'
+	 */
+	public static ArrayList<String> getPerms(String str){
+		
+		System.out.println("String:"+str);
+		
+		ArrayList<String> perms = new ArrayList<String>();
+		if(str == null || str.length() == 0){
+			System.out.println("Hit base case");
+			perms.add("");
+			return perms;
+		}
+		
+		char first = str.charAt(0);
+		String remaining = str.substring(1);
+		ArrayList<String> words = getPerms(remaining);
+		
+		for(String word: words){
+			System.out.println("Word:"+word);
+			
+			for(int i = 0; i <= word.length();i++){
+				String prefix = word.substring(0,i);
+				System.out.println("Prefix:"+prefix);
+				
+				String suffix = word.substring(i);
+				System.out.println("Suffix:"+suffix);
+				
+				System.out.println("Adding Permutation: " + prefix + first + suffix + " to arraylist of perms");
+				perms.add(prefix + first + suffix);
+			}
+		}
+		
+		return perms;	
+	}
+	
+	public static void main(String[] args) {
+		PermutationsOfStringChars p = new PermutationsOfStringChars();
+		//p.perms("", "abc");
+		
+		ArrayList<String> perms = getPerms("bc");
+		
+		System.out.println();
+		System.out.println("Permutations are..");
+		for(int i=0; i<perms.size(); i++)
+			System.out.println(perms.get(i));
+	}
+}
+
+/*
+Trace - 
+ 
+String:bc
+String:c
+String:
+
+Hit base case
+
+Word:
+Prefix:
+Suffix:
+Adding Permutation: c to arraylist of perms
+
+Word:c
+Prefix:
+Suffix:c
+Adding Permutation: bc to arraylist of perms
+Prefix:c
+Suffix:
+Adding Permutation: cb to arraylist of perms
+
+Permutations are..
+bc
+cb
+ 
+*/

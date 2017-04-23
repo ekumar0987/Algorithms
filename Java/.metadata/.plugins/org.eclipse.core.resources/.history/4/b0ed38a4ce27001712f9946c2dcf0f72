@@ -1,0 +1,19 @@
+/*
+ * Compute all permutations of a string of unique characters
+ */
+public class PermutationsOfStringChars {
+
+	public void perms(String prefix, String str){
+		
+		if(str.length() == 0)
+			System.out.println(prefix);
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+
+	}
+
+}

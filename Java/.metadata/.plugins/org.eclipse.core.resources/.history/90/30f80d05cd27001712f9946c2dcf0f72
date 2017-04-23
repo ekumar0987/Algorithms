@@ -1,0 +1,10 @@
+/*
+ * Compute all permutations of a string of unique characters
+ */
+public class PermutationsOfStringChars {
+
+	public static void main(String[] args) {
+
+	}
+
+}
