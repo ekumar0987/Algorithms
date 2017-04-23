@@ -15,7 +15,6 @@ public class SubsetsOfSet {
 		
 		// call to get other non empty subsets
 		getSubsets(allsubsets,set, 0);
-		return allsubsets;
 	}
 	
 	public void getSubsets(ArrayList<ArrayList<Integer>> allsubsets, ArrayList<Integer> set, int currindex){
@@ -40,8 +39,6 @@ public class SubsetsOfSet {
 		 *     which then gets added to allsubsets
 		 */
 		ArrayList<ArrayList<Integer>> moresubsets = new ArrayList<ArrayList<Integer>>();
-		
-		// loop over previous subsets, and current item to this
 		for(ArrayList<Integer> subset: allsubsets){
 			ArrayList<Integer> newsubset = new ArrayList<Integer>();
 			newsubset.addAll(subset);
@@ -60,8 +57,8 @@ public class SubsetsOfSet {
 		SubsetsOfSet s = new SubsetsOfSet();
 		ArrayList<Integer> set = new ArrayList<Integer>();
 		set.add(1);
-		set.add(2);
-		set.add(3);
+		//set.add(2);
+		//set.add(3);
 		
 		System.out.println("The subsets of the set are:");
 		ArrayList<ArrayList<Integer>> allsubsets = s.getSubsetsWrapper(set);
