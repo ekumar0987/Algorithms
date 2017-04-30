@@ -3,9 +3,9 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="datastructures.LinkedList"/>
 <fullyQualifiedTypeName name="datastructures.BinarySearchTrees"/>
 <fullyQualifiedTypeName name="datastructures.BinarySearchTrees.Node"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

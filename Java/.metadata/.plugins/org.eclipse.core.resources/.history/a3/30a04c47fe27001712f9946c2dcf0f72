@@ -4,9 +4,6 @@
 public class LongestIncreasingSubsequence{
 	static int bestEnd = 0;
 	
-	/*
-	 * O(n2) complexity DP
-	 */
 	public static int[] LISDP(int[] array){
 		int maxLength = 1;
 		//int bestEnd = 0;
@@ -40,10 +37,6 @@ public class LongestIncreasingSubsequence{
 		}
 		return prev;
 	}
-	
-	/*
-	 * O(nlogn) complexity
-	 */
 
 	public static void main(String[] args) {
 		int[] arr = {3,1,5,2,6,4,9};

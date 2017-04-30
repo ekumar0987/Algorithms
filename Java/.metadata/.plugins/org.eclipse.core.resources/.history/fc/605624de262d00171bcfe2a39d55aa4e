@@ -68,7 +68,7 @@ public class PermutationsOfStringChars {
 		PermutationsOfStringChars p = new PermutationsOfStringChars();
 		//p.perms("", "abc");
 		
-		ArrayList<String> perms = getPerms("abc");
+		ArrayList<String> perms = getPerms("bc");
 		
 		System.out.println();
 		System.out.println("Permutations are..");
